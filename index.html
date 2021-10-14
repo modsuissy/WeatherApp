@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>weather app</title>
+  </head>
+  <body>
+    <div class="widescreen">
+      Only for screen equal or less than 600 px. <br />Your width:
+      <span></span> px
+    </div>
+    <section class="loader-zindex">
+      <div class="loader"></div>
+    </section>
+    <section class="main-content">
+      <nav class="top-container">
+        <div class="menu">
+          <div class="menu-burger"></div>
+        </div>
+        <div class="location">
+          <i class="bx bx-current-location"></i>
+          <input type="text" placeholder="Name of city" />
+        </div>
+        <div class="settings">
+          <i class="bx bx-dots-vertical"></i>
+        </div>
+      </nav>
+      <div class="main-weather">
+        <div class="weather-icon">
+          <i class="bx bx-cloud-lightning"></i>
+        </div>
+        <div class="weather-celsium">
+          <span>21°</span>
+        </div>
+        <div class="weather-type">
+          <span>Thunderstorm</span>
+        </div>
+        <div class="weather-date">
+          <span>Monday, 09 September</span>
+        </div>
+      </div>
+      <div class="liner"></div>
+      <div class="weather-details-container">
+        <div class="wind-container">
+          <div class="wind-icon"><i class="bx bx-wind"></i></div>
+          <div class="wind-input"><span>21 km/h</span></div>
+          <div class="wind-text"><span>Wind</span></div>
+        </div>
+        <div class="wind-container">
+          <div class="wind-icon"><i class="bx bx-wind"></i></div>
+          <div class="wind-input"><span>21 km/h</span></div>
+          <div class="wind-text"><span>Wind</span></div>
+        </div>
+        <div class="wind-container">
+          <div class="wind-icon"><i class="bx bx-wind"></i></div>
+          <div class="wind-input"><span>21 km/h</span></div>
+          <div class="wind-text"><span>Wind</span></div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="motion.js"></script>
+  <script src="weather_api.js"></script>
+</html>

@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+/* Information text for widther screens */
+@media screen and (min-width: 601px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .widescreen {
+    color: gray;
+    font-size: 1rem;
+    width: 100vw;
+  }
+  .widescreen span {
+    color: chocolate;
+  }
+  .main-content {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+}
+
+@media screen and (max-width: 600px) {
+  .loader-zindex {
+    position: absolute;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 0.9;
+    display: none;
+  }
+
+  .loader-zindex.show {
+    display: flex;
+  }
+
+  .loader {
+    border: 16px solid #041023; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .widescreen {
+    display: none;
+  }
+  body {
+    background-color: #041023;
+  }
+  .main-content {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2% 3%;
+    background: linear-gradient(#0f68f3, #15bdf6);
+    box-shadow: #042450 0px 25px 20px -20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .main-content.open {
+    height: 40vh;
+  }
+  /* nav menu styling */
+  .top-container {
+    display: flex;
+    height: 5%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* location styling */
+  .location {
+    display: flex;
+    align-items: center;
+  }
+
+  .location input[type="text"] {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    background-color: transparent;
+    padding-left: 3%;
+    border: none;
+    border-bottom: 1px solid #98dbff;
+  }
+
+  ::placeholder {
+    color: #98dbff;
+  }
+
+  .location input[type="text"]:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #98dbff;
+  }
+
+  .location i {
+    display: block;
+    color: white;
+  }
+
+  .settings i {
+    color: white;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  /* Menu burger component */
+  nav div {
+    cursor: pointer;
+  }
+
+  .menu-burger {
+    width: 12px;
+    height: 2px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-burger::after,
+  .menu-burger::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-burger::before {
+    transform: translateY(-4px);
+  }
+
+  .menu-burger::after {
+    transform: translateY(4px);
+  }
+
+  .menu.open .menu-burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu.open .menu-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  .menu.open .menu-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  /* main weather styling */
+  .main-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+  .weather-icon,
+  .weather-date,
+  .weather-celsium,
+  .weather-type {
+    align-items: center;
+    width: 100%;
+  }
+  .weather-icon i {
+    color: white;
+    font-size: 40vw;
+  }
+
+  .weather-celsium span {
+    font-size: 20vw;
+    font-weight: 600;
+  }
+
+  .weather-type span {
+    font-size: 2em;
+  }
+
+  .weather-date,
+  .wind-text {
+    color: #98dbff;
+    font-size: 0.85em;
+  }
+
+  /* liner styling */
+  .liner {
+    margin: 5% auto;
+    height: 1px;
+    width: 90%;
+    background-color: #98dbff;
+    opacity: 0.5;
+  }
+
+  /* Wheater details container  */
+  .weather-details-container {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+  .wind-input {
+    font-size: 1em;
+  }
+
+  /* main weather collapse */
+  .main-weather.collapse {
+    flex-direction: ;
+  }
+}
